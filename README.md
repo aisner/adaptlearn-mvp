@@ -1,6 +1,6 @@
 # AdaptLearn MVP
 
-AdaptLearn es un MVP funcional de una plataforma de aprendizaje adaptativo pensada para educación superior. En esta primera versión, el proyecto se concentra en una asignatura introductoria de programación y articula en un mismo flujo cinco componentes clave: diagnóstico inicial, recomendación personalizada, evaluación automática de actividades breves, retroalimentación contextualizada y seguimiento docente.
+AdaptLearn es un MVP funcional de una plataforma de aprendizaje adaptativo orientada a educación superior. En esta primera versión, el proyecto se centra en una asignatura introductoria de programación y articula en un mismo flujo cinco componentes clave: diagnóstico inicial, recomendación personalizada, evaluación automática de actividades breves, retroalimentación contextualizada y seguimiento docente.
 
 ## Resumen
 
@@ -15,7 +15,7 @@ En esta versión, el alcance del MVP se concentra en:
 
 ## Funcionalidades del MVP
 
-En su versión actual, AdaptLearn integra un conjunto de funciones orientadas a acompañar el proceso de aprendizaje desde el diagnóstico inicial hasta el seguimiento posterior:
+En su estado actual, AdaptLearn integra un conjunto de funciones pensadas para acompañar el proceso de aprendizaje desde el diagnóstico inicial hasta el seguimiento posterior:
 
 - `Diagnóstico adaptativo`
   - identifica el nivel de entrada del estudiante
@@ -50,19 +50,19 @@ Por esa razón, en esta etapa aún no se incluyen:
 
 ## Arquitectura
 
-El proyecto está organizado como una arquitectura ligera basada en servicios:
+El proyecto se organiza como una arquitectura ligera basada en servicios, con separación clara entre interfaz, lógica de negocio y componentes de apoyo:
 
 - `frontend/`
   - interfaz web para estudiantes y docentes
 
 - `backend/`
-  - orquesta el flujo principal, la autenticación, la persistencia y la comunicación con los servicios de IA
+  - coordina el flujo principal, la autenticación, la persistencia y la comunicación con los servicios de IA
 
 - `ai-services/`
-  - servicios en Python para lógica adaptativa, recomendación, evaluación y retroalimentación
+  - servicios en Python para la lógica adaptativa, la recomendación, la evaluación y la retroalimentación
 
 - `data/`
-  - datos semilla y datos locales de demostración
+  - datos semilla y archivos locales de demostración
 
 - `infra/`
   - configuración de infraestructura local y variables de entorno de ejemplo
@@ -74,6 +74,8 @@ El proyecto está organizado como una arquitectura ligera basada en servicios:
   - documentación técnica y funcional de apoyo
 
 ## Stack tecnológico
+
+La solución combina herramientas livianas y adecuadas para un MVP demostrable:
 
 - `Frontend`: React, TypeScript, Vite
 - `Backend`: Node.js, Express
@@ -98,6 +100,8 @@ El proyecto está organizado como una arquitectura ligera basada en servicios:
 
 ## Ejecución local
 
+Para levantar una demostración básica del MVP en entorno local, se puede seguir este flujo:
+
 ### 1. Iniciar el servicio de IA
 
 ```powershell
@@ -118,7 +122,7 @@ http://localhost:8000
 
 ## Configuración opcional de IA local
 
-Si quieres usar un modelo local para embeddings y retroalimentación, puedes configurar Ollama antes de iniciar los servicios:
+Si se desea utilizar un modelo local para embeddings y retroalimentación, puede configurarse Ollama antes de iniciar los servicios:
 
 ```powershell
 $env:OLLAMA_URL="http://127.0.0.1:11434"
@@ -130,17 +134,17 @@ Si Ollama no está disponible, el MVP puede seguir funcionando mediante rutas lo
 
 ## Persistencia local
 
-La operación del MVP utiliza una base local SQLite:
+La operación del MVP se apoya en una base local SQLite y en algunos archivos auxiliares para conservar el estado de la demostración:
 
 - `data/adaptlearn.db`
 - `data/runtime-state.json` como estado previo opcional
 - `data/seed.json` como datos semilla
 
-Dependiendo de la configuración local, el backend puede iniciar desde semilla o migrar un estado previo de demostración.
+Según la configuración local, el backend puede iniciar desde semilla o reutilizar un estado previo de demostración.
 
 ## Verificación rápida
 
-Con los servicios activos:
+Con los servicios activos, puede ejecutarse una validación básica del flujo principal:
 
 ```powershell
 node tests/smoke-test.js
@@ -159,12 +163,16 @@ En su estado actual, este repositorio permite:
 
 ## Principios de diseño
 
+El desarrollo del MVP se apoya en algunos principios que orientan tanto las decisiones técnicas como las pedagógicas:
+
 - `trazabilidad pedagógica` por encima de automatización opaca
 - `reproducibilidad local` por encima de complejidad innecesaria
 - `validación incremental` por encima de una expansión temprana del alcance
 - `supervisión docente` por encima de decisiones académicas totalmente autónomas
 
 ## Próximas líneas de evolución
+
+A partir de esta base, el proyecto puede avanzar en varias líneas de mejora:
 
 - mejorar la calibración de competencias
 - enriquecer la lógica de recomendación
