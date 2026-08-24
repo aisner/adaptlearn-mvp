@@ -1,0 +1,727 @@
+{
+  "meta": {
+    "course": "Trayecto de Programacion y Algoritmia",
+    "maxDiagnosticItems": 6
+  },
+  "competencies": [
+    {
+      "id": "variables",
+      "name": "Variables y tipos",
+      "description": "Declara variables, elige tipos adecuados y evalua expresiones simples."
+    },
+    {
+      "id": "control_flow",
+      "name": "Control de flujo",
+      "description": "Comprende condicionales y ciclos para resolver problemas basicos."
+    },
+    {
+      "id": "functions",
+      "name": "Funciones",
+      "description": "Define funciones, parametros, retorno y reutilizacion de codigo."
+    },
+    {
+      "id": "algorithms",
+      "name": "Algoritmos",
+      "description": "Analiza pasos, entradas, salidas y eficiencia basica de una solucion."
+    },
+    {
+      "id": "arrays_lists",
+      "name": "Listas y arreglos",
+      "description": "Manipula colecciones lineales para recorrer, buscar y transformar datos."
+    },
+    {
+      "id": "recursion",
+      "name": "Recursion",
+      "description": "Reconoce casos base y descompone problemas mediante llamadas recursivas."
+    }
+  ],
+  "users": [
+    {
+      "id": "student-01",
+      "name": "Laura Perez",
+      "email": "laura@adaptlearn.local",
+      "password": "demo123",
+      "role": "student",
+      "course": "Programacion I"
+    },
+    {
+      "id": "student-02",
+      "name": "Mateo Rojas",
+      "email": "mateo@adaptlearn.local",
+      "password": "demo123",
+      "role": "student",
+      "course": "Fundamentos de Algoritmia"
+    },
+    {
+      "id": "student-03",
+      "name": "Sofia Calderon",
+      "email": "sofia@adaptlearn.local",
+      "password": "demo123",
+      "role": "student",
+      "course": "Estructuras de Datos"
+    },
+    {
+      "id": "student-04",
+      "name": "Daniel Quintero",
+      "email": "daniel@adaptlearn.local",
+      "password": "demo123",
+      "role": "student",
+      "course": "Programacion I"
+    },
+    {
+      "id": "teacher-01",
+      "name": "Carlos Mendez",
+      "email": "carlos@adaptlearn.local",
+      "password": "demo123",
+      "role": "teacher",
+      "course": "Programacion I"
+    },
+    {
+      "id": "teacher-02",
+      "name": "Andrea Molina",
+      "email": "andrea@adaptlearn.local",
+      "password": "demo123",
+      "role": "teacher",
+      "course": "Fundamentos de Algoritmia"
+    }
+  ],
+  "students": [
+    {
+      "userId": "student-01",
+      "cohort": "2026-B",
+      "diagnosticAttempts": [],
+      "latestProfile": null,
+      "recommendations": [],
+      "activitySubmission": null,
+      "resourceProgress": {},
+      "studyPlan": {
+        "weeklyGoal": "Completar la ruta base de nivelacion antes del viernes.",
+        "availableHours": 4,
+        "focusCompetencyId": "control_flow",
+        "personalNote": "Necesito practicar mas ciclos y condicionales con ejemplos cortos."
+      },
+      "supportRequests": [],
+      "teacherInterventions": []
+    },
+    {
+      "userId": "student-02",
+      "cohort": "2026-B",
+      "diagnosticAttempts": [],
+      "latestProfile": null,
+      "recommendations": [],
+      "activitySubmission": null,
+      "resourceProgress": {},
+      "studyPlan": {
+        "weeklyGoal": "Dominar trazado de algoritmos y pseudocodigo esta semana.",
+        "availableHours": 5,
+        "focusCompetencyId": "algorithms",
+        "personalNote": "Me cuesta pasar de la idea general al paso a paso exacto."
+      },
+      "supportRequests": [],
+      "teacherInterventions": []
+    },
+    {
+      "userId": "student-03",
+      "cohort": "2026-B",
+      "diagnosticAttempts": [],
+      "latestProfile": null,
+      "recommendations": [],
+      "activitySubmission": null,
+      "resourceProgress": {},
+      "studyPlan": {
+        "weeklyGoal": "Practicar listas y recorridos con ejercicios diarios.",
+        "availableHours": 6,
+        "focusCompetencyId": "arrays_lists",
+        "personalNote": "Quiero ganar seguridad al recorrer y actualizar listas."
+      },
+      "supportRequests": [],
+      "teacherInterventions": []
+    },
+    {
+      "userId": "student-04",
+      "cohort": "2026-C",
+      "diagnosticAttempts": [],
+      "latestProfile": null,
+      "recommendations": [],
+      "activitySubmission": null,
+      "resourceProgress": {},
+      "studyPlan": {
+        "weeklyGoal": "Entender funciones y recursion antes del siguiente taller.",
+        "availableHours": 3,
+        "focusCompetencyId": "recursion",
+        "personalNote": "Entiendo los casos simples, pero me pierdo cuando una funcion se llama a si misma."
+      },
+      "supportRequests": [],
+      "teacherInterventions": []
+    }
+  ],
+  "diagnosticItems": [
+    {
+      "id": "var-1",
+      "competencyId": "variables",
+      "difficulty": 1,
+      "courseName": "Programacion I",
+      "prompt": "En Python, cual declaracion crea una variable numerica con valor 5?",
+      "options": ["x = 5", "int x = 5", "x := int(5)", "var x <- 5"],
+      "correctOption": 0,
+      "explanation": "Python asigna valores con el operador = sin declarar el tipo."
+    },
+    {
+      "id": "var-2",
+      "competencyId": "variables",
+      "difficulty": 2,
+      "courseName": "Programacion I",
+      "prompt": "Que imprime `print(type(3.14).__name__)`?",
+      "options": ["int", "float", "number", "double"],
+      "correctOption": 1,
+      "explanation": "3.14 es un numero de punto flotante en Python."
+    },
+    {
+      "id": "var-3",
+      "competencyId": "variables",
+      "difficulty": 3,
+      "courseName": "Programacion I",
+      "prompt": "Si `a = 4` y `b = 3`, cual es el resultado de `a ** b`?",
+      "options": ["7", "12", "64", "43"],
+      "correctOption": 2,
+      "explanation": "`**` representa potenciacion, por eso 4 elevado a 3 es 64."
+    },
+    {
+      "id": "var-4",
+      "competencyId": "variables",
+      "difficulty": 1,
+      "courseName": "Programacion I",
+      "prompt": "Cual de estos valores corresponde al tipo booleano en Python?",
+      "options": ["\"True\"", "TRUE", "True", "1 as bool"],
+      "correctOption": 2,
+      "explanation": "Python usa `True` y `False` con mayuscula inicial para valores booleanos."
+    },
+    {
+      "id": "var-5",
+      "competencyId": "variables",
+      "difficulty": 2,
+      "courseName": "Programacion I",
+      "prompt": "Si `texto = \"8\"`, que expresion permite sumarle 2 como numero?",
+      "options": ["texto + 2", "int(texto) + 2", "float + texto", "texto.append(2)"],
+      "correctOption": 1,
+      "explanation": "Hay que convertir la cadena a entero antes de sumarla como numero."
+    },
+    {
+      "id": "var-6",
+      "competencyId": "variables",
+      "difficulty": 3,
+      "courseName": "Programacion I",
+      "prompt": "Si `x = 7`, cual es el valor final de `x` despues de ejecutar `x += 3`?",
+      "options": ["3", "7", "10", "73"],
+      "correctOption": 2,
+      "explanation": "`+=` suma el valor indicado a la variable actual, asi que 7 + 3 = 10."
+    },
+    {
+      "id": "flow-1",
+      "competencyId": "control_flow",
+      "difficulty": 1,
+      "courseName": "Programacion I",
+      "prompt": "Que estructura permite ejecutar codigo solo si una condicion es verdadera?",
+      "options": ["for", "if", "def", "return"],
+      "correctOption": 1,
+      "explanation": "La sentencia `if` controla decisiones segun condiciones."
+    },
+    {
+      "id": "flow-2",
+      "competencyId": "control_flow",
+      "difficulty": 2,
+      "courseName": "Programacion I",
+      "prompt": "Cuantas veces imprime `Hola` el codigo `for i in range(3): print('Hola')`?",
+      "options": ["2", "3", "4", "Depende del sistema"],
+      "correctOption": 1,
+      "explanation": "`range(3)` genera 0, 1 y 2, por eso el ciclo corre tres veces."
+    },
+    {
+      "id": "flow-3",
+      "competencyId": "control_flow",
+      "difficulty": 3,
+      "courseName": "Programacion I",
+      "prompt": "Que hace `break` dentro de un ciclo?",
+      "options": ["Ignora la iteracion actual", "Sale inmediatamente del ciclo", "Reinicia el ciclo", "Convierte el ciclo en condicion"],
+      "correctOption": 1,
+      "explanation": "`break` interrumpe el ciclo actual en ese punto."
+    },
+    {
+      "id": "flow-4",
+      "competencyId": "control_flow",
+      "difficulty": 1,
+      "courseName": "Programacion I",
+      "prompt": "Que bloque se usa para ejecutar una alternativa cuando la condicion de `if` es falsa?",
+      "options": ["elif", "while", "else", "pass"],
+      "correctOption": 2,
+      "explanation": "`else` define la ruta alternativa cuando la condicion principal no se cumple."
+    },
+    {
+      "id": "flow-5",
+      "competencyId": "control_flow",
+      "difficulty": 2,
+      "courseName": "Programacion I",
+      "prompt": "Que ocurre con `while contador < 3` si `contador` nunca cambia dentro del ciclo?",
+      "options": ["El ciclo termina al tercer intento", "Puede volverse un ciclo infinito", "Se convierte en `for`", "Python lo corrige automaticamente"],
+      "correctOption": 1,
+      "explanation": "Si la condicion sigue siendo verdadera y la variable no cambia, el ciclo puede no terminar."
+    },
+    {
+      "id": "flow-6",
+      "competencyId": "control_flow",
+      "difficulty": 3,
+      "courseName": "Programacion I",
+      "prompt": "Que hace `continue` dentro de un ciclo `for`?",
+      "options": ["Finaliza por completo el ciclo", "Salta a la siguiente iteracion", "Repite la misma iteracion", "Convierte el ciclo en condicion"],
+      "correctOption": 1,
+      "explanation": "`continue` omite el resto del bloque actual y pasa a la siguiente iteracion."
+    },
+    {
+      "id": "fun-1",
+      "competencyId": "functions",
+      "difficulty": 1,
+      "courseName": "Programacion I",
+      "prompt": "Que palabra clave se usa para definir una funcion en Python?",
+      "options": ["function", "lambda", "def", "proc"],
+      "correctOption": 2,
+      "explanation": "Las funciones se definen con la palabra reservada `def`."
+    },
+    {
+      "id": "fun-2",
+      "competencyId": "functions",
+      "difficulty": 2,
+      "courseName": "Programacion I",
+      "prompt": "Que devuelve la funcion `def suma(a, b): return a + b` al invocarla como `suma(2, 5)`?",
+      "options": ["25", "7", "Error de sintaxis", "2 + 5"],
+      "correctOption": 1,
+      "explanation": "La funcion retorna la suma numerica de los argumentos."
+    },
+    {
+      "id": "fun-3",
+      "competencyId": "functions",
+      "difficulty": 3,
+      "courseName": "Programacion I",
+      "prompt": "Por que conviene usar funciones en un programa?",
+      "options": ["Porque reemplazan todas las variables", "Porque permiten reutilizar logica y organizar el codigo", "Porque solo sirven para imprimir texto", "Porque eliminan los ciclos"],
+      "correctOption": 1,
+      "explanation": "Las funciones mejoran modularidad, reutilizacion y legibilidad."
+    },
+    {
+      "id": "fun-4",
+      "competencyId": "functions",
+      "difficulty": 1,
+      "courseName": "Programacion I",
+      "prompt": "Como se llama el valor que recibe una funcion dentro de sus parentesis al definirla?",
+      "options": ["Parametro", "Indice", "Modulo", "Atributo"],
+      "correctOption": 0,
+      "explanation": "En la definicion de una funcion, los nombres entre parentesis son parametros."
+    },
+    {
+      "id": "fun-5",
+      "competencyId": "functions",
+      "difficulty": 2,
+      "courseName": "Programacion I",
+      "prompt": "Si una funcion se define como `def saludar(nombre=\"Ana\")`, que sucede al llamarla como `saludar()`?",
+      "options": ["Produce error porque falta argumento", "Usa `Ana` como valor por defecto", "Retorna `None` sin ejecutar", "Convierte `Ana` en variable global"],
+      "correctOption": 1,
+      "explanation": "Los parametros con valor por defecto se usan cuando no se envia un argumento."
+    },
+    {
+      "id": "fun-6",
+      "competencyId": "functions",
+      "difficulty": 3,
+      "courseName": "Programacion I",
+      "prompt": "Que devuelve una funcion en Python si no tiene sentencia `return` explicita?",
+      "options": ["0", "False", "None", "Una cadena vacia"],
+      "correctOption": 2,
+      "explanation": "Si no se especifica `return`, Python devuelve `None`."
+    },
+    {
+      "id": "alg-1",
+      "competencyId": "algorithms",
+      "difficulty": 1,
+      "courseName": "Fundamentos de Algoritmia",
+      "prompt": "Cual es el primer paso recomendable al disenar un algoritmo?",
+      "options": ["Elegir un color para el diagrama", "Entender el problema y definir entradas y salidas", "Escribir el codigo final sin pruebas", "Memorizar una solucion ajena"],
+      "correctOption": 1,
+      "explanation": "Antes de programar conviene entender el problema, sus datos de entrada y el resultado esperado."
+    },
+    {
+      "id": "alg-2",
+      "competencyId": "algorithms",
+      "difficulty": 2,
+      "courseName": "Fundamentos de Algoritmia",
+      "prompt": "Que representa mejor un algoritmo?",
+      "options": ["Una lista desordenada de ideas", "Un conjunto finito de pasos para resolver un problema", "Unicamente codigo en Python", "Una respuesta correcta sin proceso"],
+      "correctOption": 1,
+      "explanation": "Un algoritmo describe una secuencia finita y ordenada de pasos."
+    },
+    {
+      "id": "alg-3",
+      "competencyId": "algorithms",
+      "difficulty": 3,
+      "courseName": "Fundamentos de Algoritmia",
+      "prompt": "Si dos algoritmos resuelven lo mismo, cual suele ser preferible?",
+      "options": ["El que usa mas lineas de codigo", "El que requiere mas memoria", "El mas claro y eficiente para el contexto", "El que tenga mas variables"],
+      "correctOption": 2,
+      "explanation": "La eleccion depende del contexto, pero suele preferirse una solucion clara y eficiente."
+    },
+    {
+      "id": "list-1",
+      "competencyId": "arrays_lists",
+      "difficulty": 1,
+      "courseName": "Estructuras de Datos",
+      "prompt": "Que estructura de Python permite guardar una secuencia ordenada de elementos modificables?",
+      "options": ["set", "tuple", "list", "bool"],
+      "correctOption": 2,
+      "explanation": "Las listas son colecciones ordenadas y mutables en Python."
+    },
+    {
+      "id": "list-2",
+      "competencyId": "arrays_lists",
+      "difficulty": 2,
+      "courseName": "Estructuras de Datos",
+      "prompt": "Si `nums = [10, 20, 30]`, que devuelve `nums[1]`?",
+      "options": ["10", "20", "30", "Error siempre"],
+      "correctOption": 1,
+      "explanation": "Los indices en Python empiezan en 0, por eso `nums[1]` es 20."
+    },
+    {
+      "id": "list-3",
+      "competencyId": "arrays_lists",
+      "difficulty": 3,
+      "courseName": "Estructuras de Datos",
+      "prompt": "Que metodo agrega un elemento al final de una lista llamada `datos`?",
+      "options": ["datos.push(x)", "datos.add(x)", "datos.append(x)", "datos.insert() final"],
+      "correctOption": 2,
+      "explanation": "`append` inserta un elemento al final de la lista."
+    },
+    {
+      "id": "rec-1",
+      "competencyId": "recursion",
+      "difficulty": 1,
+      "courseName": "Fundamentos de Algoritmia",
+      "prompt": "Que necesita toda funcion recursiva para evitar llamadas infinitas?",
+      "options": ["Una variable global", "Un caso base", "Un ciclo for interno", "Una lista vacia"],
+      "correctOption": 1,
+      "explanation": "El caso base detiene la recursion cuando se cumple una condicion."
+    },
+    {
+      "id": "rec-2",
+      "competencyId": "recursion",
+      "difficulty": 2,
+      "courseName": "Fundamentos de Algoritmia",
+      "prompt": "En una solucion recursiva correcta, que debe ocurrir en cada llamada?",
+      "options": ["El problema debe reducirse", "El problema debe crecer sin limite", "La funcion debe cambiar de nombre", "Siempre debe usar listas"],
+      "correctOption": 0,
+      "explanation": "Cada llamada recursiva debe acercarse al caso base reduciendo el problema."
+    },
+    {
+      "id": "rec-3",
+      "competencyId": "recursion",
+      "difficulty": 3,
+      "courseName": "Fundamentos de Algoritmia",
+      "prompt": "Que devuelve `factorial(1)` si 1 es el caso base en una funcion factorial recursiva?",
+      "options": ["0", "1", "2", "Depende de la lista"],
+      "correctOption": 1,
+      "explanation": "En factorial recursivo, el caso base comun devuelve 1 para `factorial(1)` o `factorial(0)`."
+    }
+  ],
+  "resources": [
+    {
+      "id": "res-variables-video",
+      "title": "Video corto: Variables sin miedo",
+      "competencyId": "variables",
+      "difficulty": 1,
+      "type": "video",
+      "durationMinutes": 8,
+      "summary": "Repasa asignacion, tipos basicos y errores frecuentes al iniciar."
+    },
+    {
+      "id": "res-variables-lab",
+      "title": "Mini laboratorio de expresiones",
+      "competencyId": "variables",
+      "difficulty": 2,
+      "type": "practice",
+      "durationMinutes": 15,
+      "summary": "Ejercicios guiados para operar con numeros y conversiones simples."
+    },
+    {
+      "id": "res-variables-bool",
+      "title": "Ficha visual de booleanos y tipos",
+      "competencyId": "variables",
+      "difficulty": 1,
+      "type": "reading",
+      "durationMinutes": 9,
+      "summary": "Aclara diferencias entre cadenas, booleanos y tipos basicos con ejemplos frecuentes."
+    },
+    {
+      "id": "res-variables-conversion",
+      "title": "Taller corto de conversion de datos",
+      "competencyId": "variables",
+      "difficulty": 2,
+      "type": "practice",
+      "durationMinutes": 17,
+      "summary": "Practica conversion entre texto y numeros para evitar errores comunes al operar."
+    },
+    {
+      "id": "res-variables-operators",
+      "title": "Guia de operadores y asignacion incremental",
+      "competencyId": "variables",
+      "difficulty": 2,
+      "type": "reading",
+      "durationMinutes": 12,
+      "summary": "Repasa potenciacion, acumuladores y operadores de asignacion con ejercicios breves."
+    },
+    {
+      "id": "res-flow-map",
+      "title": "Mapa visual de condicionales y ciclos",
+      "competencyId": "control_flow",
+      "difficulty": 1,
+      "type": "reading",
+      "durationMinutes": 10,
+      "summary": "Explica cuando usar if, while y for con ejemplos de Programacion I."
+    },
+    {
+      "id": "res-flow-katas",
+      "title": "Katas de control de flujo",
+      "competencyId": "control_flow",
+      "difficulty": 2,
+      "type": "practice",
+      "durationMinutes": 20,
+      "summary": "Retos cortos para practicar decisiones y repeticiones."
+    },
+    {
+      "id": "res-flow-if-else",
+      "title": "Microguia de decisiones con if y else",
+      "competencyId": "control_flow",
+      "difficulty": 1,
+      "type": "reading",
+      "durationMinutes": 9,
+      "summary": "Resume como plantear decisiones simples y alternativas cuando una condicion no se cumple."
+    },
+    {
+      "id": "res-flow-for-range",
+      "title": "Practica guiada de for y range",
+      "competencyId": "control_flow",
+      "difficulty": 2,
+      "type": "practice",
+      "durationMinutes": 16,
+      "summary": "Ejercicios cortos para contar iteraciones, leer range y reconocer repeticiones conocidas."
+    },
+    {
+      "id": "res-flow-loop-guards",
+      "title": "Checklist para evitar ciclos infinitos",
+      "competencyId": "control_flow",
+      "difficulty": 2,
+      "type": "reading",
+      "durationMinutes": 11,
+      "summary": "Explica como controlar condiciones de salida y actualizar variables dentro de while."
+    },
+    {
+      "id": "res-flow-break-continue",
+      "title": "Break y continue sin confusiones",
+      "competencyId": "control_flow",
+      "difficulty": 2,
+      "type": "reading",
+      "durationMinutes": 10,
+      "summary": "Compara interrupcion total y salto de iteracion con ejemplos concretos de bucles."
+    },
+    {
+      "id": "res-functions-guide",
+      "title": "Guia docente: funciones y parametros",
+      "competencyId": "functions",
+      "difficulty": 1,
+      "type": "reading",
+      "durationMinutes": 12,
+      "summary": "Material estructurado para entender parametros, retorno y modularidad."
+    },
+    {
+      "id": "res-functions-clinic",
+      "title": "Clinica de funciones reutilizables",
+      "competencyId": "functions",
+      "difficulty": 2,
+      "type": "practice",
+      "durationMinutes": 18,
+      "summary": "Actividad aplicada para transformar pasos repetidos en funciones."
+    },
+    {
+      "id": "res-functions-definition",
+      "title": "Tarjeta de sintaxis: def, parametros y llamada",
+      "competencyId": "functions",
+      "difficulty": 1,
+      "type": "reading",
+      "durationMinutes": 8,
+      "summary": "Resume la estructura minima de una funcion y la diferencia entre definir y llamar."
+    },
+    {
+      "id": "res-functions-defaults",
+      "title": "Ejemplos de parametros por defecto",
+      "competencyId": "functions",
+      "difficulty": 2,
+      "type": "reading",
+      "durationMinutes": 10,
+      "summary": "Muestra cuando usar valores por defecto y como cambian las llamadas a una funcion."
+    },
+    {
+      "id": "res-functions-returns",
+      "title": "Return, None y salida de funciones",
+      "competencyId": "functions",
+      "difficulty": 2,
+      "type": "reading",
+      "durationMinutes": 11,
+      "summary": "Aclara que devuelve una funcion con y sin return explicito usando casos pequeños."
+    },
+    {
+      "id": "res-functions-design",
+      "title": "Mini caso de modularidad y reutilizacion",
+      "competencyId": "functions",
+      "difficulty": 2,
+      "type": "practice",
+      "durationMinutes": 19,
+      "summary": "Invita a separar tareas repetidas en funciones para mejorar claridad y mantenimiento."
+    },
+    {
+      "id": "res-algorithms-canvas",
+      "title": "Lienzo para disenar algoritmos",
+      "competencyId": "algorithms",
+      "difficulty": 1,
+      "type": "reading",
+      "durationMinutes": 14,
+      "summary": "Plantilla para definir entradas, procesos, salidas y validaciones de un problema."
+    },
+    {
+      "id": "res-algorithms-lab",
+      "title": "Laboratorio de trazado paso a paso",
+      "competencyId": "algorithms",
+      "difficulty": 2,
+      "type": "practice",
+      "durationMinutes": 22,
+      "summary": "Ejercicios de simulacion manual para detectar errores logicos antes de codificar."
+    },
+    {
+      "id": "res-algorithms-problem-framing",
+      "title": "Plantilla para definir entradas y salidas",
+      "competencyId": "algorithms",
+      "difficulty": 1,
+      "type": "reading",
+      "durationMinutes": 10,
+      "summary": "Ayuda a formular el problema antes de escribir pasos o codigo."
+    },
+    {
+      "id": "res-algorithms-quality",
+      "title": "Criterios de claridad y eficiencia basica",
+      "competencyId": "algorithms",
+      "difficulty": 2,
+      "type": "reading",
+      "durationMinutes": 12,
+      "summary": "Resume como comparar soluciones que resuelven lo mismo desde legibilidad y costo."
+    },
+    {
+      "id": "res-lists-guide",
+      "title": "Guia visual de listas y recorridos",
+      "competencyId": "arrays_lists",
+      "difficulty": 1,
+      "type": "reading",
+      "durationMinutes": 11,
+      "summary": "Explica indices, recorrido e insercion en listas con ejemplos sencillos."
+    },
+    {
+      "id": "res-lists-katas",
+      "title": "Katas de listas en Python",
+      "competencyId": "arrays_lists",
+      "difficulty": 2,
+      "type": "practice",
+      "durationMinutes": 24,
+      "summary": "Problemas cortos para recorrer, filtrar y actualizar colecciones lineales."
+    },
+    {
+      "id": "res-lists-indexing",
+      "title": "Hoja rapida de indices y acceso a listas",
+      "competencyId": "arrays_lists",
+      "difficulty": 1,
+      "type": "reading",
+      "durationMinutes": 9,
+      "summary": "Explica como leer posiciones, evitar desfases y entender indices desde cero."
+    },
+    {
+      "id": "res-lists-mutation",
+      "title": "Append, insert y actualizacion de listas",
+      "competencyId": "arrays_lists",
+      "difficulty": 2,
+      "type": "practice",
+      "durationMinutes": 16,
+      "summary": "Revisa operaciones de modificacion sobre listas con ejercicios puntuales."
+    },
+    {
+      "id": "res-recursion-story",
+      "title": "Recursion contada con arboles de llamada",
+      "competencyId": "recursion",
+      "difficulty": 1,
+      "type": "reading",
+      "durationMinutes": 13,
+      "summary": "Introduce el caso base y la reduccion del problema con ejemplos visuales."
+    },
+    {
+      "id": "res-recursion-drills",
+      "title": "Drills de caso base y llamada recursiva",
+      "competencyId": "recursion",
+      "difficulty": 2,
+      "type": "practice",
+      "durationMinutes": 25,
+      "summary": "Serie de ejercicios para reconocer si una solucion recursiva converge correctamente."
+    },
+    {
+      "id": "res-recursion-base-case",
+      "title": "Caso base paso a paso",
+      "competencyId": "recursion",
+      "difficulty": 1,
+      "type": "reading",
+      "durationMinutes": 10,
+      "summary": "Visualiza por que el caso base detiene la recursion y evita llamadas infinitas."
+    },
+    {
+      "id": "res-recursion-factorial",
+      "title": "Factorial explicado con llamadas recursivas",
+      "competencyId": "recursion",
+      "difficulty": 2,
+      "type": "practice",
+      "durationMinutes": 18,
+      "summary": "Usa factorial como ejemplo para seguir el caso base y la reduccion del problema."
+    }
+  ],
+  "activity": {
+    "id": "activity-01",
+    "title": "Chequeo rapido despues de la ruta",
+    "instructions": "Responde dos preguntas cerradas y una respuesta corta para validar tu avance en programacion y algoritmia.",
+    "items": [
+      {
+        "id": "act-mcq-1",
+        "type": "multiple_choice",
+        "competencyId": "control_flow",
+        "prompt": "Si quieres repetir una accion una cantidad conocida de veces, que estructura es la mas apropiada?",
+        "options": ["if", "for", "return", "input"],
+        "correctOption": 1,
+        "points": 30
+      },
+      {
+        "id": "act-mcq-2",
+        "type": "multiple_choice",
+        "competencyId": "arrays_lists",
+        "prompt": "Que metodo permite agregar un valor al final de una lista en Python?",
+        "options": ["append", "push", "extendonly", "enqueue"],
+        "correctOption": 0,
+        "points": 30
+      },
+      {
+        "id": "act-short-1",
+        "type": "short_answer",
+        "competencyId": "functions",
+        "prompt": "Explica brevemente por que usar funciones puede mejorar un programa.",
+        "referenceAnswer": "Las funciones permiten reutilizar codigo, dividir problemas y mejorar la legibilidad y el mantenimiento.",
+        "keyConcepts": ["reutilizar", "codigo", "dividir", "legibilidad", "mantenimiento"],
+        "points": 40
+      }
+    ]
+  }
+}
