@@ -15,29 +15,33 @@ En esta versión, el alcance del MVP se concentra en:
 
 ## Funcionalidades del MVP
 
+En su versión actual, AdaptLearn integra un conjunto de funciones orientadas a acompañar el proceso de aprendizaje desde el diagnóstico inicial hasta el seguimiento posterior:
+
 - `Diagnóstico adaptativo`
-  - estima el nivel inicial del estudiante
-  - prioriza competencias y brechas de aprendizaje
+  - identifica el nivel de entrada del estudiante
+  - ayuda a reconocer competencias consolidadas y brechas de aprendizaje
 
 - `Recomendación personalizada`
-  - sugiere recursos y actividades según el perfil detectado
-  - organiza una ruta de aprendizaje explicable
+  - propone recursos y actividades según el perfil detectado
+  - organiza una ruta de aprendizaje comprensible y justificable
 
 - `Evaluación automática`
   - califica preguntas cerradas
-  - evalúa respuestas cortas con apoyo semántico local
+  - analiza respuestas cortas con apoyo semántico local
 
 - `Retroalimentación contextualizada`
-  - genera orientación sobre errores y siguientes pasos
-  - permite revisión docente antes de consolidarse
+  - ofrece orientación sobre errores, avances y siguientes pasos
+  - deja espacio para validación o revisión docente antes de consolidarse
 
 - `Dashboard docente`
-  - muestra progreso, competencias e indicadores simples de riesgo
-  - ofrece trazabilidad del recorrido del estudiante
+  - presenta progreso, competencias e indicadores básicos de riesgo
+  - facilita el seguimiento del recorrido de cada estudiante
 
 ## Alcance técnico
 
-Esta versión implementa el flujo mínimo demostrable del sistema. Por ahora no incluye:
+Esta versión implementa el flujo mínimo necesario para demostrar el funcionamiento del sistema de principio a fin. El foco está puesto en validar la lógica central del MVP, no en cubrir todavía todas las capacidades que podría tener una plataforma completa.
+
+Por esa razón, en esta etapa aún no se incluyen:
 
 - evaluación de ensayos extensos
 - analítica predictiva avanzada de deserción
