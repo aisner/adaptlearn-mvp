@@ -1,69 +1,120 @@
 # AdaptLearn MVP
 
-MVP demostrable del proyecto **AdaptLearn** alineado con el flujo definido en la propuesta del seminario:
+MVP funcional de una plataforma de aprendizaje adaptativo orientada a educación superior. AdaptLearn valida un flujo integrado para una asignatura introductoria de programación: diagnóstico inicial, recomendación personalizada, evaluación automática de actividades breves, retroalimentación contextualizada y seguimiento docente.
 
-- autenticacion por rol;
-- diagnostico adaptativo;
-- recomendacion personalizada;
-- evaluacion breve automatizada;
-- feedback contextualizado;
-- dashboard docente con alertas simples.
+## Resumen
 
-## Funcionalidades ampliadas
+AdaptLearn fue diseñado como un prototipo técnico validable en un entorno académico controlado. Su objetivo es demostrar que un flujo integrado de diagnóstico, recomendación, evaluación y retroalimentación puede aportar valor pedagógico real sin aumentar la carga operativa del docente.
 
-- Estudiante:
-  - plan de estudio editable con meta semanal, horas disponibles, competencia foco y nota personal;
-  - seguimiento de recursos recomendados con marca de completado y reflexion breve;
-  - solicitud de apoyo docente con estado visible.
-- Docente:
-  - filtros por estudiantes en riesgo, con apoyo pendiente o con revision requerida;
-  - detalle por estudiante con plan, solicitudes, progreso y trazabilidad;
-  - registro de intervenciones pedagogicas y cierre de solicitudes de apoyo.
+El alcance actual del MVP se centra en:
 
-## Estructura
+- una asignatura de `Programación I`
+- usuarios `estudiante` y `docente`
+- ejecución local o institucional controlada
+- trazabilidad entre decisiones del sistema y supervisión pedagógica
 
-- `frontend/`: interfaz web responsiva.
-- `backend/`: servidor HTTP y orquestacion del flujo.
-- `ai-services/`: servicio Python para logica adaptativa.
-- `data/`: datos semilla para Programacion I.
-- `tests/`: prueba de humo del flujo extremo a extremo.
-- `docs/`: alcance funcional resumido.
+## Funcionalidades del MVP
 
-## Persistencia
+- `Diagnóstico adaptativo`
+  - estima el nivel inicial del estudiante
+  - prioriza competencias y brechas de aprendizaje
 
-- La informacion operativa del MVP se guarda en una base de datos SQLite local: `data/adaptlearn.db`.
-- En el primer arranque, si existe `data/runtime-state.json`, el backend migra ese estado a SQLite para conservar la demo actual.
-- Si no existe estado previo, la base se inicializa desde `data/seed.json`.
+- `Recomendación personalizada`
+  - sugiere recursos y actividades según el perfil detectado
+  - organiza una ruta de aprendizaje explicable
 
-## Alineacion con la propuesta
+- `Evaluación automática`
+  - califica preguntas cerradas
+  - evalúa respuestas cortas con apoyo semántico local
 
-- El diagnostico adaptativo incorpora una estimacion mas cercana a IRT para priorizar competencias y seleccionar items segun informacion esperada.
-- La evaluacion de respuestas cortas combina coincidencia conceptual con similitud semantica local.
-- La retroalimentacion contextualizada puede apoyarse en un modelo local servido por Ollama mediante `OLLAMA_MODEL`.
-- Si no hay modelo local disponible, el MVP mantiene un fallback verificable para no bloquear la demostracion.
+- `Retroalimentación contextualizada`
+  - genera orientación sobre errores y siguientes pasos
+  - permite revisión docente antes de consolidarse
 
-## Infraestructura local preparada
+- `Dashboard docente`
+  - muestra progreso, competencias e indicadores simples de riesgo
+  - ofrece trazabilidad del recorrido del estudiante
 
-- `infra/docker-compose.yml`: servicios base para PostgreSQL, Redis y Ollama en entorno local controlado.
-- `infra/.env.example`: variables de ejemplo para conectar el servicio de IA local.
+## Alcance técnico
 
-## Arranque local
+Esta versión del repositorio implementa el flujo mínimo demostrable del sistema. No incluye todavía:
 
-En una terminal:
+- evaluación de ensayos extensos
+- analítica predictiva avanzada de deserción
+- generación automática de ítems
+- integración completa con LMS o sistemas institucionales
+
+## Arquitectura
+
+El proyecto está organizado como una arquitectura ligera basada en servicios:
+
+- `frontend/`
+  - interfaz web para estudiantes y docentes
+
+- `backend/`
+  - orquestación del flujo, autenticación, persistencia y coordinación con servicios de IA
+
+- `ai-services/`
+  - servicios Python para lógica adaptativa, recomendación, evaluación y retroalimentación
+
+- `data/`
+  - datos semilla y datos locales de demostración
+
+- `infra/`
+  - configuración de infraestructura local y variables de entorno de ejemplo
+
+- `tests/`
+  - pruebas del flujo crítico del MVP
+
+- `docs/`
+  - documentación técnica y funcional de apoyo
+
+## Stack tecnológico
+
+- `Frontend`: React, TypeScript, Vite
+- `Backend`: Node.js, Express
+- `Servicios IA`: Python, FastAPI
+- `Persistencia`: SQLite
+- `IA local opcional`: Ollama + modelo tipo Mistral
+- `Infraestructura`: Docker Compose
+
+## Estructura del repositorio
+
+```text
+.
+├── ai-services/
+├── backend/
+├── data/
+├── docs/
+├── frontend/
+├── infra/
+├── tests/
+└── README.md
+```
+
+## Ejecución local
+
+### 1. Iniciar el servicio de IA
 
 ```powershell
 python ai-services/server.py
 ```
 
-En otra terminal:
+### 2. Iniciar el backend
 
 ```powershell
 node backend/server.js
 ```
 
-Luego abre [http://localhost:8000](http://localhost:8000).
+### 3. Abrir la aplicación
 
-Si deseas activar el modelo local para feedback y similitud semantica, define antes estas variables:
+```text
+http://localhost:8000
+```
+
+## Configuración opcional de IA local
+
+Si deseas usar un modelo local para embeddings y retroalimentación:
 
 ```powershell
 $env:OLLAMA_URL="http://127.0.0.1:11434"
@@ -71,23 +122,53 @@ $env:OLLAMA_MODEL="mistral:7b-instruct"
 $env:OLLAMA_EMBED_MODEL="nomic-embed-text"
 ```
 
-En el estado actual del MVP, si Ollama ya esta disponible en `127.0.0.1:11434`, el servicio de IA intenta usarlo automaticamente y prioriza `mistral:7b` como modelo local de feedback cuando esta instalado.
+Si Ollama no está disponible, el MVP puede seguir operando mediante rutas locales de respaldo para no bloquear la demostración.
 
-## Credenciales demo
+## Persistencia local
 
-- `laura@adaptlearn.local` / `demo123`
-- `carlos@adaptlearn.local` / `demo123`
+La operación del MVP utiliza una base local SQLite:
 
-## Verificacion rapida
+- `data/adaptlearn.db`
+- `data/runtime-state.json` como estado previo opcional
+- `data/seed.json` como datos semilla
 
-Con ambos servicios activos:
+Según la configuración local, el backend puede inicializar desde semilla o migrar un estado previo de demostración.
+
+## Verificación rápida
+
+Con los servicios activos:
 
 ```powershell
 node tests/smoke-test.js
 ```
 
-## Notas
+## Estado actual
 
-- El backend usa SQLite embebido mediante `node:sqlite` y mantiene el flujo sin dependencias externas adicionales.
-- Si el servicio Python no esta activo, el backend sigue operando con un motor local de respaldo para no bloquear la demostracion.
-- Cuando Ollama esta disponible, el servicio Python puede producir feedback contextualizado con un modelo local del tipo Mistral y embeddings locales para respuestas cortas.
+AdaptLearn debe entenderse como un `MVP en validación controlada`, no como una plataforma lista para producción.
+
+Este repositorio busca demostrar:
+
+- un flujo funcional coherente de diagnóstico a retroalimentación
+- separación modular entre interfaz, backend y servicios de IA
+- reproducibilidad local para demostraciones y pilotos tempranos
+- trazabilidad entre interacción del usuario, decisiones automáticas y revisión docente
+
+## Principios de diseño
+
+- `trazabilidad pedagógica` sobre automatización opaca
+- `reproducibilidad local` sobre complejidad innecesaria
+- `validación incremental` sobre expansión temprana del alcance
+- `supervisión docente` sobre decisiones académicas totalmente autónomas
+
+## Próximas líneas de evolución
+
+- mejorar calibración de competencias
+- enriquecer la lógica de recomendación
+- ampliar cobertura de evaluación breve
+- fortalecer la analítica docente
+- incorporar mejor instrumentación para pilotos
+- estudiar rutas de integración institucional
+
+## Uso
+
+Este repositorio se comparte con fines académicos, técnicos y de demostración asociados al MVP de AdaptLearn.
