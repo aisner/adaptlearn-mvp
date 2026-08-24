@@ -4,7 +4,7 @@ AdaptLearn es un MVP funcional de una plataforma de aprendizaje adaptativo pensa
 
 ## Resumen
 
-Este repositorio contiene la implementación técnica del MVP. La idea es probar, en un entorno académico controlado, si un flujo integrado de diagnóstico, recomendación, evaluación y retroalimentación puede aportar valor pedagógico real sin aumentar la carga operativa del docente.
+Este repositorio reúne la implementación técnica del MVP. Más que presentar una plataforma terminada, busca mostrar cómo puede llevarse a la práctica un flujo adaptativo completo en un contexto académico controlado, y observar si ese enfoque aporta valor pedagógico real sin aumentar la carga del docente.
 
 En esta versión, el alcance del MVP se concentra en:
 
@@ -144,14 +144,14 @@ node tests/smoke-test.js
 
 ## Estado actual
 
-AdaptLearn debe entenderse como un `MVP en evolución`, no como una plataforma lista para producción.
+AdaptLearn se encuentra en una etapa temprana de evolución. No busca presentarse todavía como una plataforma lista para producción, sino como una base funcional que permite demostrar el flujo principal del sistema, realizar pruebas controladas y orientar mejoras a partir de la evidencia recogida.
 
-Hoy, este repositorio permite mostrar:
+En su estado actual, este repositorio permite:
 
-- un flujo funcional coherente desde el diagnóstico hasta la retroalimentación
-- una separación modular entre interfaz, backend y servicios de IA
-- reproducibilidad local para demostraciones y pilotos tempranos
-- trazabilidad entre interacción del usuario, decisiones automáticas y revisión docente
+- mostrar un flujo funcional coherente desde el diagnóstico hasta la retroalimentación
+- mantener una separación modular entre interfaz, backend y servicios de IA
+- facilitar la ejecución local para demostraciones y pilotos tempranos
+- conservar trazabilidad entre la interacción del usuario, las decisiones automáticas y la revisión docente
 
 ## Principios de diseño
 
@@ -171,4 +171,4 @@ Hoy, este repositorio permite mostrar:
 
 ## Uso
 
-Este repositorio se comparte con fines académicos, técnicos y de demostración alrededor del MVP de AdaptLearn.
+Este repositorio se comparte con fines académicos, técnicos y de demostración. Su propósito principal es documentar y mostrar el MVP de AdaptLearn como base de trabajo para pruebas, discusión y evolución del proyecto.
