@@ -1,6 +1,6 @@
 # AdaptLearn MVP
 
-AdaptLearn es un MVP funcional de una plataforma de aprendizaje adaptativo para educación superior. El proyecto está pensado para una asignatura introductoria de programación y reúne en un mismo flujo cinco piezas clave: diagnóstico inicial, recomendación personalizada, evaluación automática de actividades breves, retroalimentación contextualizada y seguimiento docente.
+AdaptLearn es un MVP funcional de una plataforma de aprendizaje adaptativo pensada para educación superior. En esta primera versión, el proyecto se concentra en una asignatura introductoria de programación y articula en un mismo flujo cinco componentes clave: diagnóstico inicial, recomendación personalizada, evaluación automática de actividades breves, retroalimentación contextualizada y seguimiento docente.
 
 ## Resumen
 
